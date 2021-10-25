@@ -1,8 +1,6 @@
 package com.example.stackoverflobiz.data
 
-import com.example.datasource.models.QuestionsListResponse
 import com.example.datasource.models.services.StackExchangeApi
-import com.example.stackoverflobiz.utils.Resource
 
 class QuestionsRepo(
 private val api: StackExchangeApi
@@ -12,9 +10,12 @@ private val api: StackExchangeApi
         api.fetchAllQuestions()
     }
 
-    fun fetchSearchedQuestions(searchQuery: String) = safeApiCall {
-        api.searchQuestions(searchQuery)
+    suspend fun getSearchedQuestions(searchQuery: String) = safeApiCall {
+        api.searchQuestions(searchQuery = searchQuery)
     }
 
+    suspend fun getFilteredQuestionsByTags(tags: String) = safeApiCall {
+        api.filterQuestionsByTags(tags = tags)
+    }
 
 }

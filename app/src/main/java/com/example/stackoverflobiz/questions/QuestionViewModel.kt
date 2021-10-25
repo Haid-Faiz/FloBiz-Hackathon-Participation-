@@ -26,6 +26,11 @@ class QuestionViewModel constructor(
 
     fun getSearchedQuestions(searchQuery: String) = viewModelScope.launch {
         _searchedQuestions.postValue(Resource.Loading())
-        _searchedQuestions.postValue(questionRepo.fetchSearchedQuestions(searchQuery))
+        _searchedQuestions.postValue(questionRepo.getSearchedQuestions(searchQuery))
+    }
+
+    fun getFilteredQuestions(tags: String) = viewModelScope.launch {
+        _searchedQuestions.postValue(Resource.Loading())
+        _searchedQuestions.postValue(questionRepo.getFilteredQuestionsByTags(tags = tags))
     }
 }

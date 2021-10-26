@@ -25,7 +25,7 @@ data class Question(
     @Json(name = "last_edit_date")
     var lastEditDate: Int?,
     @Json(name = "link")
-    var link: String,
+    var link: String?,
     @Json(name = "owner")
     var owner: Owner,
     @Json(name = "question_id")

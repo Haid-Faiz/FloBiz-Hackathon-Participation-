@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -56,12 +57,8 @@ dependencies {
     implementation "io.coil-kt:coil:$coil_version"
 
     // Dagger-Hilt for Dependency Injection
-//    implementation "com.google.dagger:hilt-android:$hilt_version"
-//    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
-
-    // JetPack DataStore
-//    implementation "androidx.datastore:datastore-preferences:$datastore_version"
-//    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-rc01'
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
     // Module dependency (libnews library)
     implementation project(path: ':datasource')
@@ -69,22 +66,16 @@ dependencies {
     // Kotlin Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
 
-//    // Lottie Animation Library
-//    implementation "com.airbnb.android:lottie:$lottie_version"
-//
 //    // Chrome Custom Tab
-//    implementation "androidx.browser:browser:$chrome_custom_tab_version"
+    implementation "androidx.browser:browser:$chrome_custom_tab_version"
 
-    // Facebook shimmer effect
-    // implementation "com.facebook.shimmer:shimmer:$facebook_shimmer"
+//     Facebook shimmer effect
+     implementation "com.facebook.shimmer:shimmer:$facebook_shimmer"
 
-//    // Material Dot viewpager indicator library
-//    implementation "com.github.zhpanvip:viewpagerindicator:$dot_indicator"
 
     // Intuit ssp & sdp
     implementation "com.intuit.sdp:sdp-android:$intuit_version"
     implementation "com.intuit.ssp:ssp-android:$intuit_version"
-
 
 
     testImplementation 'junit:junit:4.+'

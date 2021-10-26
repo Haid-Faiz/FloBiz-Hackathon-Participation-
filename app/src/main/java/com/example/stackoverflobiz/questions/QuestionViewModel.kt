@@ -7,19 +7,31 @@ import androidx.lifecycle.viewModelScope
 import com.example.datasource.models.QuestionsListResponse
 import com.example.stackoverflobiz.data.QuestionsRepo
 import com.example.stackoverflobiz.utils.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class QuestionViewModel constructor(
+@HiltViewModel
+class QuestionViewModel @Inject constructor(
     private val questionRepo: QuestionsRepo,
 ) : ViewModel() {
 
     private val _trendingQuestions = MutableLiveData<Resource<QuestionsListResponse>>()
     val trendingQuestions: LiveData<Resource<QuestionsListResponse>> = _trendingQuestions
 
+    init {
+        getTrendingQuestions()
+    }
+
+
+
     private val _searchedQuestions = MutableLiveData<Resource<QuestionsListResponse>>()
     val searchedQuestions: LiveData<Resource<QuestionsListResponse>> = _searchedQuestions
 
-    fun getTrendingQuestions() = viewModelScope.launch {
+    private val _filteredQuestions = MutableLiveData<Resource<QuestionsListResponse>>()
+    val filteredQuestions: LiveData<Resource<QuestionsListResponse>> = _filteredQuestions
+
+    private fun getTrendingQuestions() = viewModelScope.launch {
         _trendingQuestions.postValue(Resource.Loading())
         _trendingQuestions.postValue(questionRepo.fetchAllQuestions())
     }
@@ -30,7 +42,7 @@ class QuestionViewModel constructor(
     }
 
     fun getFilteredQuestions(tags: String) = viewModelScope.launch {
-        _searchedQuestions.postValue(Resource.Loading())
-        _searchedQuestions.postValue(questionRepo.getFilteredQuestionsByTags(tags = tags))
+        _filteredQuestions.postValue(Resource.Loading())
+        _filteredQuestions.postValue(questionRepo.getFilteredQuestionsByTags(tags = tags))
     }
 }

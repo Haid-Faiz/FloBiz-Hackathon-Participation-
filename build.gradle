@@ -30,7 +30,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
 
 //        // Dagger-Hilt
-//        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
 //        // Safe argsto pass data b / w destinations with type safety
 //        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 

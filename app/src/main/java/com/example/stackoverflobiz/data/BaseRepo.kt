@@ -9,7 +9,7 @@ import retrofit2.HttpException
 import retrofit2.Response
 import java.io.IOException
 
-abstract class BaseRepo constructor() {
+abstract class BaseRepo {
 
     suspend fun <T> safeApiCall(api: suspend () -> Response<T>): Resource<T> {
 

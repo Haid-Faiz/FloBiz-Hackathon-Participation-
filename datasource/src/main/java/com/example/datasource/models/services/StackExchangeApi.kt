@@ -13,7 +13,7 @@ interface StackExchangeApi {
         @Query("sort") sortBy: String = "activity",
         @Query("site") site: String = "stackoverflow",
         @Query("page") page: Int = 1,
-        @Query("pageSize") pageSize: Int = 20,
+        @Query("pageSize") pageSize: Int = 50,
     ): Response<QuestionsListResponse>
 
 
@@ -25,7 +25,7 @@ interface StackExchangeApi {
         @Query("sort") sortBy: String = "votes",
         @Query("site") site: String = "stackoverflow",
         @Query("page") page: Int = 1,
-        @Query("pageSize") pageSize: Int = 20,
+        @Query("pageSize") pageSize: Int = 50,
     ) : Response<QuestionsListResponse>
 
     @GET("/2.3/search")
@@ -36,6 +36,6 @@ interface StackExchangeApi {
         @Query("sort") sortBy: String = "votes",
         @Query("site") site: String = "stackoverflow",
         @Query("page") page: Int = 1,
-        @Query("pageSize") pageSize: Int = 20,
+        @Query("pageSize") pageSize: Int = 50,
     ) : Response<QuestionsListResponse>
 }

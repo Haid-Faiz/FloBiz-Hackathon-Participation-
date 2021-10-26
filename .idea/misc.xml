@@ -3,18 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/grey_bg.xml" value="0.21197916666666666" />
         <entry key="app/src/main/res/drawable/ic_arrow_back.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_bubble_24.xml" value="0.1890625" />
         <entry key="app/src/main/res/drawable/ic_close.xml" value="0.16111111111111112" />
         <entry key="app/src/main/res/drawable/ic_filter_list_24.xml" value="0.20364583333333333" />
         <entry key="app/src/main/res/drawable/ic_nav_search_24.xml" value="0.16111111111111112" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_questions.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_questions.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_tags_dialog.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_advertise.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/item_question.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_tag.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_tag_filter.xml" value="0.33" />
         <entry key="app/src/main/res/layout/list_item_article.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/list_shimmer.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/list_shimmer.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/shimmer_progress.xml" value="0.18125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1890625" />
       </map>
     </option>
   </component>

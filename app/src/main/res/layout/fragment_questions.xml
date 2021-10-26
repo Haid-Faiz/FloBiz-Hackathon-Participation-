@@ -173,6 +173,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_margin="@dimen/_24sdp"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingBottom="@dimen/_96sdp"
@@ -180,7 +181,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_136sdp"
+            android:layout_height="@dimen/_114sdp"
             android:src="@drawable/ic_error_outline_24" />
 
         <TextView
@@ -188,6 +189,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_8sdp"
             android:text="Oops... Something went wrong !!"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_18ssp" />
